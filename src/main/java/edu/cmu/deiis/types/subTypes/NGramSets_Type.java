@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import edu.cmu.deiis.types.NGram_Type;
 
 /** 
- * Updated by JCasGen Mon Sep 23 02:09:11 EDT 2013
+ * Updated by JCasGen Mon Sep 23 19:24:02 EDT 2013
  * @generated */
 public class NGramSets_Type extends NGram_Type {
   /** @generated */
@@ -67,7 +67,7 @@ public class NGramSets_Type extends NGram_Type {
     if (lowLevelTypeChecks)
       return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_NGramTokens), i, true);
     jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_NGramTokens), i);
-	return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_NGramTokens), i);
+  return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_NGramTokens), i);
   }
    
   /** @generated */ 

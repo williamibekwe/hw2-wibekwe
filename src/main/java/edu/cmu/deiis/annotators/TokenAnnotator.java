@@ -52,7 +52,7 @@ public class TokenAnnotator extends JCasAnnotator_ImplBase {
 			Answer a = (Answer) answerList.get(i);
 			String[] answerTokens = a.getAnswerString().split(" ");
 			Answer suba =new Answer(jcas);
-			//The length is n -2 because the in the file the first two word are not in the answer strings 
+			//stores the the list of tokens in each variable
 			FSArray atokenList =new FSArray(jcas, answerTokens.length); 
 			for( int j = 0; j < answerTokens.length; j++ ){ 
 				Token t =new Token(jcas); 

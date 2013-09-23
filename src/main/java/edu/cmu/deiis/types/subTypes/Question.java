@@ -10,7 +10,7 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** 
- * Updated by JCasGen Mon Sep 23 02:09:11 EDT 2013
+ * Updated by JCasGen Mon Sep 23 19:24:02 EDT 2013
  * XML source: /Users/willibeamin/Documents/workspace/hw2-wibekwe/src/main/resources/descriptors/subTypesDescriptor.xml
  * @generated */
 public class Question extends edu.cmu.deiis.types.Question {

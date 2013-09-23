@@ -16,7 +16,7 @@
       <features>
         <featureDescription>
           <name>Question</name>
-          <description/>
+          <description>Wrapper type around Question. Stores the Question of the Question/Answer Input Model. </description>
           <rangeTypeName>edu.cmu.deiis.types.subTypes.Question</rangeTypeName>
         </featureDescription>
         <featureDescription>

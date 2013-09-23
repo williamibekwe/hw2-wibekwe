@@ -19,7 +19,9 @@ import edu.cmu.deiis.types.subTypes.Token;
 
 public class NGramAnnotator extends JCasAnnotator_ImplBase{
 
+	// this variable of the number of ngram sets. 
 	private int numberofNGrams = 4; 
+	
 	@Override
 	public void process( JCas jcas){
 		/*
@@ -38,8 +40,8 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase{
 		Sentence sentence = question.getSentenceStructure();
 		String questionString[] = question.getQuestionsString().split(" ");
 		FSArray questionNGramsList =new FSArray(jcas, numberofNGrams);
+		//parses through and t string and creates ngrams
 		for(int i = 0; i < numberofNGrams; i++){
-			//NGramSets ngs =new NGramSets(jcas); 
 			FSArray qNGramsList =new FSArray( jcas, questionString.length);
 			for( int j=0; j + i < questionString.length; j++ ){
 				Token t =new Token(jcas); 
@@ -67,8 +69,8 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase{
 			Sentence answerSentence = ans.getSentenceStructure();
 			String answerString[] = ans.getAnswerString().split(" ");
 			FSArray answerNGramsList =new FSArray(jcas, numberofNGrams);
+			// parses through gets the ngrams
 			for(int i = 0; i < numberofNGrams; i++){
-				//NGramSets ngs =new NGramSets(jcas); 
 				FSArray aNGramsList =new FSArray( jcas, answerString.length);
 				for( int j=0; j + i < answerString.length; j++ ){
 					Token t =new Token(jcas); 

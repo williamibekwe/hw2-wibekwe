@@ -11,7 +11,7 @@ import org.apache.uima.jcas.tcas.DocumentAnnotation;
 
 
 /** 
- * Updated by JCasGen Mon Sep 23 02:09:11 EDT 2013
+ * Updated by JCasGen Mon Sep 23 19:24:02 EDT 2013
  * XML source: /Users/willibeamin/Documents/workspace/hw2-wibekwe/src/main/resources/descriptors/subTypesDescriptor.xml
  * @generated */
 public class CASDocuments extends DocumentAnnotation {
@@ -65,14 +65,14 @@ public class CASDocuments extends DocumentAnnotation {
   //*--------------*
   //* Feature: Question
 
-  /** getter for Question - gets 
+  /** getter for Question - gets Wrapper type around Question. Stores the Question of the Question/Answer Input Model. 
    * @generated */
   public Question getQuestion() {
     if (CASDocuments_Type.featOkTst && ((CASDocuments_Type)jcasType).casFeat_Question == null)
       jcasType.jcas.throwFeatMissing("Question", "edu.cmu.deiis.types.subTypes.CASDocuments");
     return (Question)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((CASDocuments_Type)jcasType).casFeatCode_Question)));}
     
-  /** setter for Question - sets  
+  /** setter for Question - sets Wrapper type around Question. Stores the Question of the Question/Answer Input Model.  
    * @generated */
   public void setQuestion(Question v) {
     if (CASDocuments_Type.featOkTst && ((CASDocuments_Type)jcasType).casFeat_Question == null)

@@ -18,7 +18,6 @@ public class DocumentAnnotator extends JCasAnnotator_ImplBase {
 		//This annotator will get the document and split the contents into a question and a list of answers
 		String d = aJCas.getDocumentText();
 		String[] document = d.split("\n"); 
-		//System.out.println("Here is " + aJCas.getViewName() +"-->" +  d);
 		Question question =new Question(aJCas);
 		Answers answers =new Answers(aJCas);
 		CASDocuments doc =new CASDocuments(aJCas);
@@ -31,6 +30,7 @@ public class DocumentAnnotator extends JCasAnnotator_ImplBase {
 		for( int i = 1; i < document.length; i++ ){
 			Answer a =new Answer(aJCas);
 			String splitAnswer[] = document[i].split(" ");
+			//The following will check the gold standard
 			if(splitAnswer[1].equals("1")){
 				a.setCorrectAnswer(true);
 			} else {

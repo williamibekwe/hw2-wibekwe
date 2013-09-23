@@ -37,7 +37,8 @@ public class EvaluationAnnotator extends JCasAnnotator_ImplBase {
 			Answer ans = (Answer) answerList.get(i);
 			ranking.put(ans, ans.getScore());
 		}
-		
+		//puts all answer inside a map for better easier printing. 
+		//prints into the right answers and the calculated score then prints the wrong answer and calculated score
 		for(Map.Entry<Answer,Double> entry : ranking.entrySet()){
 			if( entry.getKey().getCorrectAnswer())
 			System.out.println( "+ " + Math.round( entry.getValue() * 10.0 ) / 10.0 + " " + (entry.getKey()).getAnswerString());
@@ -46,6 +47,7 @@ public class EvaluationAnnotator extends JCasAnnotator_ImplBase {
 			if( !entry.getKey().getCorrectAnswer())
 			System.out.println( "- " + Math.round( entry.getValue() * 10.0 ) / 10.0 + " " + (entry.getKey()).getAnswerString());
 		}
+		System.out.println();
 	}
 
 }

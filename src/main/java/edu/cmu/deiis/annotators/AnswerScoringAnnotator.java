@@ -31,17 +31,17 @@ public class AnswerScoringAnnotator extends JCasAnnotator_ImplBase {
 		String questionString = question.getQuestionsString();
 		questionString = questionString.replaceAll("[^a-zA-Z]+$", "");
 		String questionarray[] = questionString.split("\\s+");
-		questionarray = Arrays.copyOfRange(questionarray, 1,questionarray.length);
+		questionarray = Arrays.copyOfRange(questionarray, 0,questionarray.length);
 		Answers answers = document.getAnswers();
 		FSArray answerList = answers.getAnswerList();
+		//parse strings into string lists and passes them in to the JaccardSimilarity Algorithm
 		for (int i = 0; i < answerList.size(); i++) {
 			Answer ans = (Answer) answerList.get(i);
 			String ansString = ans.getAnswerString();
 			ansString = ansString.replaceAll("[^a-zA-Z]+$", "");
 			String ansList[] = ansString.split("\\s+");
-			ansList = Arrays.copyOfRange(ansList, 2, ansList.length);
+			ansList = Arrays.copyOfRange(ansList, 0, ansList.length);
 			ans.setScore(JaccardSimilarity.jaccardSimilarity(questionarray,ansList));
-			//System.out.println(ans.getScore());
 		}
 
 	}
