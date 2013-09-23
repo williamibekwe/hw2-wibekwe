@@ -24,6 +24,7 @@ public class TokenAnnotator extends JCasAnnotator_ImplBase {
 		Question question = document.getQuestion();
 		
 		/*
+		 * 
 		 * This block of code tokenizes the word in the question string
 		 * and puts this back into the document globals index 
 		 */

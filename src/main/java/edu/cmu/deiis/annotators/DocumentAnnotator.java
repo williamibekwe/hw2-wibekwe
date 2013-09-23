@@ -15,7 +15,10 @@ public class DocumentAnnotator extends JCasAnnotator_ImplBase {
 	@Override
 	 public void process(JCas aJCas) {
 		
-		//This annotator will get the document and split the contents into a question and a list of answers
+		/* @param
+		 * This annotator will get the document and split the contents into a question and a list of answers
+		 * 
+		 */
 		String d = aJCas.getDocumentText();
 		String[] document = d.split("\n"); 
 		Question question =new Question(aJCas);

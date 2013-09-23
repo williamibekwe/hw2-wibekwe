@@ -33,6 +33,8 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase{
 		CASDocuments document = (CASDocuments)iter.next();
 		
 		/*
+		 * @param
+
 		 * The block of code the the token list from the question type and 
 		 * created the list of NGramSets and returns them back to the global index document 
 		 */
